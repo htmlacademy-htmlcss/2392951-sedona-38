@@ -108,26 +108,17 @@
       </fieldset>
       <fieldset class="hotel-filter-group">
         <legend class="hotel-filter-title">Стоимость, ₽:</legend>
-        <input class="lowest-prise" type="number" value="0">
+        <input class="lowest-price" type="number" value="0">
         <span class="min-prise">от</span>
-        <input class="highest-prise" type="number" value="9000">
+        <input class="highest-price" type="number" value="9000">
         <span class="max-prise">до</span>
       </fieldset>
-
-      <div class="prise">
-        Стоимость
-      </div>
 
       <button class="button-search" type="submit">Применить</button>
       <button class="button-cancel" type="reset">Сбросить</button>
 
 
-     </form>
-     <div> </div>
-     <div> </div>
-     <div> </div>
-    </section>
-    /--!  --/
+
     <section class="hotel-article">
       <h2 class="founded-hotels">Найдено гостиниц</h2>
       <select class="select-control" aria-label="Сортировка">
@@ -162,6 +153,9 @@
             <p>Гостиница от 4000</p>
             <a class="hotel-card button button" href="#">подробнее</a>
             <a class="hotel-card button button-blue button" href="#">в избранное</a>
+            <p>
+              <span class="visually-hidden">Четырехзвездочный отель</span>
+            </p>
             <span class="rating">Рейтинг: 8,5</span>
           </a>
         </li>
@@ -172,6 +166,9 @@
             <p>Гостиница от 5000</p>
             <a class="hotel-card button button" href="#">подробнее</a>
             <a class="hotel-card button button-green button" href="#">в избранное</a>
+            <p>
+              <span class="visually-hidden">Четырехзвездочный отель</span>
+            </p>
             <span class="rating">Рейтинг: 9,2</span>
           </a>
         </li>
@@ -182,6 +179,9 @@
             <p>Гостиница от 2500</p>
             <a class="hotel-card button button" href="#">подробнее</a>
             <a class="hotel-card button button-blue button" href="#">в избранное</a>
+            <p>
+              <span class="visually-hidden">Трехзвездочный отель</span>
+            </p>
             <span class="rating">Рейтинг: 6,9</span>
           </a>
         </li>
@@ -192,6 +192,9 @@
             <p>Гостиница от 1500</p>
             <a class="hotel-card button button" href="#">подробнее</a>
             <a class="hotel-card button button-blue button" href="#">в избранное</a>
+            <p>
+              <span class="visually-hidden">Двухзвездочный отель</span>
+            </p>
             <span class="rating">Рейтинг: 5,0</span>
           </a>
         </li>
@@ -266,17 +269,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-<li class="pagination-item">
-  <a class="pagination-item-list pagination-prev pagination-disabled" >
-    <span class="visually-hidden">Предыдущая страница</span>
-  </a>
-</li>
-<li class="pagination-item">
-  <a class="pagination-item-list pagination-next" >
-    <span class="visually-hidden">Следующая страница</span>
-  </a>
-</li>
