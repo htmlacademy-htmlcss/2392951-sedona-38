@@ -38,9 +38,7 @@ body {
 
 .advantages {
   text-align: center;
-}
-
-.advantages-preview {
+  background-color: #83b3d3;
   align-items: center;
 }
 
@@ -96,6 +94,11 @@ body {
 
 .navigation-link {
   text-decoration: none;
+  font-size: 20px;
+
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
 }
 
 .list-reset {
@@ -112,6 +115,7 @@ body {
 
 .hotel-filter {
   background-color: #497795;
+  color: #ffffff;
   background-image: url(../images/catalog-page/filter.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,31 +135,28 @@ body {
 .button {
   border-radius: 4px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  text-decoration: none;
+  padding: 8px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .primary-button {
   background-color: #756157;
-  color: #ffffff;
-  padding: 8px 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
 }
 
 .secondary-button {
-  padding: 8px 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   background-color: #82b3d3;
-  text-decoration: none;
+}
+
+.cancell-button {
+  background-color: transparent;
 }
 
 .number-of-likes {
@@ -177,6 +178,7 @@ body {
 
 .hotel-image-link {
   text-decoration: none;
+  color: #000000;
 }
 
 .footer-contacts-address-phone {
