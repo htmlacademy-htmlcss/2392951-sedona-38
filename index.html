@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link rel="normalize.css" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
@@ -54,7 +55,6 @@
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden">Сохраненное</span>
-            <span class="number-of-likes">12</span>
             <svg
               width="18"
               height="17"
@@ -67,12 +67,17 @@
                 fill="black"
               />
             </svg>
+            <span class="number-of-likes">12</span>
           </a>
         </li>
       </ul>
     </nav>
 
-    <a class="navigation-link-button button" href="#" type="button">
+    <a
+      class="navigation-link-button button primary-button"
+      href="#"
+      type="button"
+    >
       <span class="registration">Хочу сюда!</span>
     </a>
 
@@ -128,19 +133,27 @@
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item-title">Небольшая площадь</h3>
-            <p>Все достопримечательности находятся очень близко</p>
+            <p class="advantages-item-paragraph">
+              Все достопримечательности находятся очень близко
+            </p>
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item-title">Красивая дорога</h3>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages-item-paragraph">
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            </p>
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item-title">Мало туристов</h3>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="advantages-item-paragraph">
+              Большинство едет в Гранд Каньон и толпится там
+            </p>
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item-title">Там есть мост дьявола</h3>
-            <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <p class="advantages-item-paragraph">
+              Да, по нему можно пройти! Если вы осмелитесь, разумеется
+            </p>
             <img
               src="images/index-page/advantages/photo-2.jpg"
               width="800"
@@ -155,20 +168,24 @@
           Приезжайте в Седону отдохнуть в комфорте и уюте!
         </h2>
         <p>Опытный персонал и качественное обслуживание!</p>
-        <ul class="service-list">
+        <ul class="service-list list-reset">
           <li class="service-item">
             <h3 class="service-item-title">Жильё</h3>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <p class="service-item-paragraph">
+              Рекомендуем пожить в настоящем мотеле, всё как в кино!
+            </p>
           </li>
           <li class="service-item">
             <h3 class="service-item-title">Еда</h3>
-            <p>
+            <p class="service-item-paragraph">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
           <li class="service-item">
             <h3 class="service-item-title">Сувениры</h3>
-            <p>Не только китайского, но и настоящего местного производства!</p>
+            <p class="service-item-paragraph">
+              Не только китайского, но и настоящего местного производства!
+            </p>
           </li>
         </ul>
       </section>
@@ -178,28 +195,33 @@
           Укажите предполагаемые даты поездки,и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a href="#">Поиск гостиницы в седоне</a>
+        <a class="button primary-button" href="#" type="button"
+          >Поиск гостиницы в седоне</a
+        >
       </section>
-      <section class="newsletter">
+      <section class="newsteller newsteller-main">
         <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form
-          class="newsletter-form"
+          class="newsteller-form"
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <label for="newsletter-email">Email</label>
+          <label for="newsteller-email">Email</label>
           <input
             class="field"
             placeholder="Ваш e-mail"
             type="email"
-            name="newsletter-email"
-            id="newsletter-email"
+            name="newsteller-email"
+            id="newsteller-email"
             required
           />
-          <button class="button newsletter-button" type="submit">
+          <button
+            class="button newsteller-button secondary-button"
+            type="submit"
+          >
             <span class="subscribe">Подписаться</span>
           </button>
         </form>
@@ -213,19 +235,51 @@
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
-              <svg></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="15"
+                fill="none"
+              >
+                <path
+                  fill="#83B3D3"
+                  fill-rule="evenodd"
+                  d="M24.1 1.8c.2-.5 0-1-.8-1h-2.6c-.7 0-1 .4-1.1.8 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.8V1.8c0-.7-.2-1-.8-1h-4c-.5 0-.8.4-.8.6 0 .7 1 .8 1 2.6v3.8c0 .8 0 1-.4 1-.9 0-3-3.3-4.3-7-.3-.7-.5-1-1.2-1H1.6c-.8 0-1 .4-1 .8 0 .7 1 4 4.2 8.5C7 13.2 10 15 12.8 15c1.7 0 1.9-.4 1.9-1v-2.4c0-.7.2-.8.7-.8.4 0 1 .1 2.6 1.6 1.8 1.8 2 2.6 3 2.6h2.7c.7 0 1.1-.4 1-1.1-.3-.8-1.2-1.8-2.3-3-.6-.8-1.5-1.5-1.8-2-.4-.4-.3-.6 0-1 0 0 3.2-4.5 3.5-6Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
-              <svg></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="16"
+                fill="none"
+              >
+                <path
+                  fill="#83B3D3"
+                  d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z"
+                />
+              </svg>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
-              <svg></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="18"
+                fill="none"
+              >
+                <path
+                  fill="#83B3D3"
+                  d="M19 .4H3.4C1.6.4.3 2 .3 3.8v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.8C22.1 2 20.8.4 19 .4ZM8 12.9v-8l7.3 4-7.3 4Z"
+                />
+              </svg>
             </a>
           </li>
         </ul>
