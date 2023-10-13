@@ -61,16 +61,44 @@ body {
 .search {
   text-align: center;
   background-color: #ffffff;
+  padding: 96px 304px;
 }
 
 .search-title {
   text-transform: uppercase;
 }
 
+.search-button {
+  padding: 0 50px;
+}
+
+.hero {
+  background-image: url("../images/index-page/hero-block/index-background.jpg");
+  background-color: #497795;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 51px 371px 82px;
+}
+.advantages-preview {
+  background-color: #ffffff;
+  padding: 69px;
+}
+
+.advantages-preview-title {
+  color: #d9d9d9;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 69px 290px 141px;
+}
+
 .newsteller {
   text-align: center;
   background-color: #ffffff;
   color: #000000;
+  padding: 96px 258px 104px;
 }
 
 .newsteller-main {
