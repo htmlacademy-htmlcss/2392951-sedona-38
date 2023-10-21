@@ -24,8 +24,11 @@
           </a>
           <nav class="navigation">
             <ul class="navigation-list list-reset">
-              <li class="navigation-list-item current-page">
-                <a class="navigation-link" aria-current="page" href="index.html"
+              <li class="navigation-list-item">
+                <a
+                  class="navigation-link current-page"
+                  aria-current="page"
+                  href="index.html"
                   >Главная</a
                 >
               </li>
@@ -280,7 +283,7 @@
       </section>
       <section class="search">
         <h2 class="search-title">Заинтересовались?</h2>
-        <p>
+        <p class="search-paragraph">
           Укажите предполагаемые даты поездки,и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
@@ -290,7 +293,7 @@
       </section>
       <section class="newsteller newsteller-main">
         <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
-        <p>
+        <p class="newsteller-paragraph">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form
@@ -298,21 +301,23 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <label for="newsteller-email">Email</label>
-          <input
-            class="field"
-            placeholder="Ваш e-mail"
-            type="email"
-            name="newsteller-email"
-            id="newsteller-email"
-            required
-          />
-          <button
-            class="button newsteller-button secondary-button"
-            type="submit"
-          >
-            <span class="subscribe">Подписаться</span>
-          </button>
+          <div class="newsteller-form-wrapper">
+            <label class="visually-hidden" for="newsteller-email">Email</label>
+            <input
+              class="field"
+              placeholder="Ваш e-mail"
+              type="email"
+              name="newsteller-email"
+              id="newsteller-email"
+              required
+            />
+            <button
+              class="button newsteller-button secondary-button"
+              type="submit"
+            >
+              <span class="subscribe">Подписаться</span>
+            </button>
+          </div>
         </form>
       </section>
     </main>
