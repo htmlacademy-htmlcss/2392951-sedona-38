@@ -11,197 +11,525 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
-  <body>
-    ...
-    <footer data-test="footer">...</footer>
-    <div class="modal modal-reservation" data-test="modal">
-      <button class="modal-close-button" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <section class="modal-content">
-        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+  <body class="page-container">
+    <header class="page-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <a class="logo" href="index.html">
+            <img
+              src="images/header/logo.svg"
+              width="140"
+              height="70"
+              alt="Логотоп Седоны"
+            />
+          </a>
+          <nav class="navigation">
+            <ul class="navigation-list list-reset">
+              <li class="navigation-list-item">
+                <a
+                  class="navigation-link current-page"
+                  aria-current="page"
+                  href="index.html"
+                  >Главная</a
+                >
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">О Седоне</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
+
+            <ul class="navigation-user list-reset">
+              <li class="navigation-user-item">
+                <a class="navigation-user-link search-icon" href="#">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link likes-icon" href="#">
+                  <span class="visually-hidden">Сохраненное</span>
+                  <span class="number-of-likes">12</span>
+                </a>
+              </li>
+
+              <li class="navigation-user-item navigation-link-button-block">
+                <a class="navigation-link-button button primary-button" href="#"
+                  >Хочу сюда!
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main-index main-container">
+      <section class="hero" data-test="hero">
+        <h1 class="visually visually-hidden">Сайт поиска отелей в Седоне</h1>
+
+        <img
+          src="images/index-page/hero-block/welcome.svg"
+          alt=" Welcome to the gorgeous Sedona, because the Grand Canyon sucks!"
+        />
+      </section>
+
+      <section class="advantages" data-test="advantages">
+        <h2 class="visually-hidden advantages-title">Приемущества</h2>
+        <div class="container">
+          <div class="advantages-preview">
+            <h3 class="advantages-preview-title">
+              Седона — небольшой городок в Аризоне, заслуживающий большего!
+            </h3>
+            <p class="stiled-paragraph">
+              Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+            </p>
+          </div>
+        </div>
+        <ul class="advantages-list list-reset">
+          <li class="advantages-item advantages-item-wide">
+            <div class="advantages-wide-column advantages-description-column">
+              <h3 class="advantages-item-title advantages-item-title-wide">
+                Настоящий городок
+              </h3>
+              <p
+                class="advantages-item-paragraph advantages-item-paragraph-wide"
+              >
+                Седона — не аттракцион для туристов, там течёт своя жизнь
+              </p>
+            </div>
+            <img
+              src="images/index-page/advantages/photo-1.jpg"
+              width="800"
+              height="385"
+              alt="Городок Седона"
+            />
+          </li>
+
+          <li class="advantages-item clear">
+            <div class="advantages-normal-column advantages-description-column">
+              <h3 class="advantages-item-title">Небольшая площадь</h3>
+              <p class="advantages-item-paragraph stiled-paragraph">
+                Все достопримечательности находятся очень близко
+              </p>
+            </div>
+          </li>
+          <li class="advantages-item light-clear">
+            <div class="advantages-normal-column advantages-description-column">
+              <h3 class="advantages-item-title">
+                Красивая<br />
+                дорога
+              </h3>
+              <p class="advantages-item-paragraph stiled-paragraph">
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
+              </p>
+            </div>
+          </li>
+
+          <li class="advantages-item clear">
+            <div class="advantages-normal-column advantages-description-column">
+              <h3 class="advantages-item-title">
+                Мало<br />
+                туристов
+              </h3>
+              <p class="advantages-item-paragraph stiled-paragraph">
+                Большинство едет в Гранд Каньон и толпится там
+              </p>
+            </div>
+          </li>
+          <li
+            class="advantages-item advantages-item-wide advantages-item-wide-reverse"
+          >
+            <div class="advantages-wide-column advantages-description-column">
+              <h3 class="advantages-item-title advantages-item-title-wide">
+                Там есть<br />
+                мост дьявола
+              </h3>
+              <p
+                class="advantages-item-paragraph advantages-item-paragraph-wide"
+              >
+                Да, по нему можно пройти! Если вы осмелитесь, разумеется
+              </p>
+            </div>
+            <img
+              src="images/index-page/advantages/photo-2.jpg"
+              width="800"
+              height="385"
+              alt="Мост дьявола"
+            />
+          </li>
+        </ul>
+      </section>
+      <section class="service" data-test="service">
+        <div class="service-wrapper">
+          <h2 class="service-title">
+            Приезжайте в Седону отдохнуть в комфорте и уюте!
+          </h2>
+          <p class="stiled-paragraph">
+            Опытный персонал и качественное обслуживание!
+          </p>
+        </div>
+        <ul class="service-list list-reset">
+          <li class="service-item service-item-housing clear">
+            <h3 class="service-item-title">Жильё</h3>
+
+            <p class="service-item-paragraph stiled-paragraph">
+              Рекомендуем пожить<br />
+              в настоящем мотеле,<br />
+              всё как в кино!
+            </p>
+          </li>
+          <li class="service-item service-item-food">
+            <h3 class="service-item-title">Еда</h3>
+
+            <p class="service-item-paragraph stiled-paragraph">
+              Всегда заказывайте<br />
+              топовый фирменный бургер,<br />
+              вы не разочаруетесь!
+            </p>
+          </li>
+          <li class="service-item service-item-souvenirs clear">
+            <h3 class="service-item-title">Сувениры</h3>
+
+            <p class="service-item-paragraph stiled-paragraph">
+              Не только китайского,<br />
+              но и настоящего местного<br />
+              производства!
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="search" data-test="search">
+        <h2 class="search-title">Заинтересовались?</h2>
+        <p class="search-paragraph stiled-paragraph">
+          Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
+          предложения гостиниц в Седоне
+        </p>
+        <a class="button primary-button search-button" href="#"
+          >Поиск гостиницы в седоне</a
+        >
+      </section>
+      <section class="newsteller newsteller-main" data-test="subscribe">
+        <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
+        <p class="newsteller-paragraph stiled-paragraph">
+          Только полезная информация и никакого спама,<br />
+          честное бойскаутское!
+        </p>
         <form
-          class="form-reservation"
+          class="newsteller-form"
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <div class="filed-group reservation-form-date">
-            <label class="modal-form-label" for="reservation-start"
-              >Дата заезда:</label
-            >
-
+          <div class="newsteller-form-wrapper">
+            <label class="visually-hidden" for="newsteller-email">Email</label>
             <input
-              class="modal-form-input modal-data-input"
-              type="text"
-              id="reservation-start"
-              name="name-start"
-              value="27 апреля 2020"
-              placeholder="Укажите дату"
+              class="field"
+              placeholder="Ваш e-mail"
+              type="email"
+              name="newsteller-email"
+              id="newsteller-email"
+              required
             />
-            <span class="modal-error modal-hint">
-              Мы не можем отправить вас в прошлое.
-            </span>
-          </div>
-          <div class="filed-group reservation-form-date">
-            <label class="modal-form-label" for="reservation-end"
-              >Дата выезда:</label
+            <button
+              class="button newsteller-button secondary-button"
+              type="submit"
             >
-
-            <input
-              class="modal-form-input modal-data-input"
-              type="text"
-              id="reservation-end"
-              name="data-end"
-              value="1 сентября 2023"
-              placeholder="Укажите дату"
-            />
-            <span class="modal-hint">
-              На эти даты есть свободные номера. Пока есть.
-            </span>
+              Подписаться
+            </button>
           </div>
+        </form>
+      </section>
+    </main>
 
-          <div class="people-number-wrapper">
-            <div class="filed-group reservation-form-date people-number">
-              <span>Взрослые:</span>
-              <div class="modal-input-number-wrapper">
-                <button
-                  class="modal-form-number-button reduce-button"
-                  type="button"
+    <footer class="page-footer" data-test="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <section class="footer-social">
+            <h2 class="page-footer-title visually-hidden">Как нас найти</h2>
+            <ul class="footer-social-list list-reset">
+              <li class="footer-social-item">
+                <a
+                  class="social-button button"
+                  href="https://vk.com/htmlacademy"
                 >
+                  <span class="visually-hidden">ВКонтакте</span>
                   <svg
-                    class="people-svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
-                    aria-label="reduce"
-                  >
-                    <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
-                  </svg>
-                </button>
-                <label class="modal-form-label" for="adults">
-                  <input
-                    class="modal-form-input field-people"
-                    type="number"
-                    id="adults"
-                    value="2"
-                    min="1"
-                    max="99"
-                    name="adults-number"
-                /></label>
-                <button
-                  class="modal-form-number-button add-button"
-                  type="button"
-                >
-                  <svg
-                    class="people-svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="add"
+                    width="25"
+                    height="15"
+                    fill="none"
+                    role="img"
                   >
                     <path
-                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                      fill="#7561573d"
+                      class="social-icon"
+                      fill="#83B3D3"
+                      fill-rule="evenodd"
+                      d="M24.1 1.8c.2-.5 0-1-.8-1h-2.6c-.7 0-1 .4-1.1.8 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.8V1.8c0-.7-.2-1-.8-1h-4c-.5 0-.8.4-.8.6 0 .7 1 .8 1 2.6v3.8c0 .8 0 1-.4 1-.9 0-3-3.3-4.3-7-.3-.7-.5-1-1.2-1H1.6c-.8 0-1 .4-1 .8 0 .7 1 4 4.2 8.5C7 13.2 10 15 12.8 15c1.7 0 1.9-.4 1.9-1v-2.4c0-.7.2-.8.7-.8.4 0 1 .1 2.6 1.6 1.8 1.8 2 2.6 3 2.6h2.7c.7 0 1.1-.4 1-1.1-.3-.8-1.2-1.8-2.3-3-.6-.8-1.5-1.5-1.8-2-.4-.4-.3-.6 0-1 0 0 3.2-4.5 3.5-6Z"
+                      clip-rule="evenodd"
                     />
                   </svg>
-                </button>
-              </div>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="social-button button" href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Телеграм</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="16"
+                    fill="none"
+                    role="img"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#83B3D3"
+                      d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a
+                  class="social-button button"
+                  href="https://www.youtube.com/user/htmlacademyru"
+                >
+                  <span class="visually-hidden">Ютуб</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="18"
+                    fill="none"
+                    role="img"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#83B3D3"
+                      d="M19 .4H3.4C1.6.4.3 2 .3 3.8v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.8C22.1 2 20.8.4 19 .4ZM8 12.9v-8l7.3 4-7.3 4Z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="footer-contacts">
+            <h2 class="visually-hidden">Наш номер телефона</h2>
+            <a class="footer-contacts-address-phone" href="tel:+78005558628"
+              >+7 (812) 812-12-12</a
+            >
+          </section>
+          <section>
+            <div class="footer-html-logo">
+              <h2 class="visually-hidden">Логотип HTML Academy</h2>
+              <a href="https://htmlacademy.ru/" class="html-logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="115"
+                  height="34"
+                  fill="none"
+                  role="img"
+                >
+                  <path
+                    fill="#000"
+                    d="M0 13.3v2.6h2.5v-2.6H0ZM11.6 4.9c-1.6 0-2.8.7-3.6 1.7h-.1V.4h-2v15.5h2v-5.3C7.9 8.5 9.2 7 11.2 7c1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.8c.1-3-1.8-5-4.5-5ZM26.6 5.2h-4.8V1.5h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V7.2h4.8v-2ZM41.1 5c-1.6 0-2.9.8-3.5 2h-.1a3.7 3.7 0 0 0-3.4-2c-1.4 0-2.5.8-3.1 1.8h-.1V5.2H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V9.3c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 13c0 1.8 1 2.8 2.8 2.8h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.4h-2V13ZM28.9 20a4.9 4.9 0 0 0-3.9-1.7c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-2h.1v1.7h2V18.6h-2V20Zm-3.6 7.5a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22.4c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1v-.2ZM55.1 20a4.9 4.9 0 0 0-3.9-1.7c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-2h.1v1.7h2V18.6h-2V20Zm-3.6 7.5a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 20.2a5 5 0 0 0-3.9-2c-3.1 0-5.4 2.4-5.4 5.7 0 3.3 2.2 5.6 5.4 5.6 1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.8h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 18.3a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-3h8.8c.2-3.5-2-6.2-5.5-6.2Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5a3.2 3.2 0 0 1 3.2-2.6ZM98.2 18.3a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27.4l-3.6-9h-2.2l4.8 11.7c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-reservation" data-test="modal">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form
+            class="form-reservation"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <div class="filed-group reservation-form-date">
+              <label class="modal-form-label" for="reservation-start"
+                >Дата заезда:</label
+              >
+
+              <input
+                class="modal-form-input modal-data-input"
+                type="text"
+                id="reservation-start"
+                name="name-start"
+                value="27 апреля 2020"
+                placeholder="Укажите дату"
+              />
+              <span class="modal-error modal-hint">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </div>
+            <div class="filed-group reservation-form-date">
+              <label class="modal-form-label" for="reservation-end"
+                >Дата выезда:</label
+              >
+
+              <input
+                class="modal-form-input modal-data-input"
+                type="text"
+                id="reservation-end"
+                name="data-end"
+                value="1 сентября 2023"
+                placeholder="Укажите дату"
+              />
+              <span class="modal-hint">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
             </div>
 
-            <div class="filed-group reservation-form-date people-number">
-              <div class="modal-child-wrapper">
-                <span>Дети:</span>
-                <span class="tooltip">
+            <div class="people-number-wrapper">
+              <div class="filed-group reservation-form-date people-number">
+                <span>Взрослые:</span>
+                <div class="modal-input-number-wrapper">
                   <button
-                    class="tooltip-toggle"
-                    aria-labelledby="tooltip-label-date"
+                    class="modal-form-number-button reduce-button"
                     type="button"
                   >
                     <svg
-                      class="tooltip-icon"
+                      class="people-svg"
                       width="20"
                       height="20"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
+                      aria-label="reduce"
+                    >
+                      <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
+                    </svg>
+                  </button>
+                  <label class="modal-form-label" for="adults">
+                    <input
+                      class="modal-form-input field-people"
+                      type="number"
+                      id="adults"
+                      value="2"
+                      min="1"
+                      max="99"
+                      name="adults-number"
+                  /></label>
+                  <button
+                    class="modal-form-number-button add-button"
+                    type="button"
+                  >
+                    <svg
+                      class="people-svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="add"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z"
-                        fill="white"
+                        d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                        fill="#7561573d"
                       />
                     </svg>
                   </button>
-                  <span
-                    class="tooltip-text"
-                    role="tooltip"
-                    id="tooltip-label-date"
-                  >
-                    Укажите количество детей, которые будут с вами, возраст
-                    которых от 6 до 18 лет. Дети до 6 лет размещаются
-                    бесплатно.</span
-                  >
-                </span>
+                </div>
               </div>
-              <div class="modal-input-number-wrapper">
-                <button
-                  class="modal-form-number-button reduce-button"
-                  type="button"
-                >
-                  <svg
-                    class="people-svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="reduce"
+
+              <div class="filed-group reservation-form-date people-number">
+                <div class="modal-child-wrapper">
+                  <span>Дети:</span>
+                  <span class="tooltip">
+                    <button
+                      class="tooltip-toggle"
+                      aria-labelledby="tooltip-label-date"
+                      type="button"
+                    >
+                      <svg
+                        class="tooltip-icon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                    <span
+                      class="tooltip-text"
+                      role="tooltip"
+                      id="tooltip-label-date"
+                    >
+                      Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.</span
+                    >
+                  </span>
+                </div>
+                <div class="modal-input-number-wrapper">
+                  <button
+                    class="modal-form-number-button reduce-button"
+                    type="button"
                   >
-                    <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
-                  </svg>
-                </button>
-                <label class="modal-form-label" for="child">
-                  <input
-                    class="modal-form-input field-people"
-                    type="number"
-                    id="child"
-                    name="child-number"
-                    value="2"
-                    max="99"
-                    min="0"
-                /></label>
-                <button
-                  class="modal-form-number-button add-button"
-                  type="button"
-                >
-                  <svg
-                    class="people-svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="add"
+                    <svg
+                      class="people-svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-label="reduce"
+                    >
+                      <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
+                    </svg>
+                  </button>
+                  <label class="modal-form-label" for="child">
+                    <input
+                      class="modal-form-input field-people"
+                      type="number"
+                      id="child"
+                      name="child-number"
+                      value="2"
+                      max="99"
+                      min="0"
+                  /></label>
+                  <button
+                    class="modal-form-number-button add-button"
+                    type="button"
                   >
-                    <path
-                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                      fill="#7561573d"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      class="people-svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="add"
+                    >
+                      <path
+                        d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                        fill="#7561573d"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <button type="submit" class="modal-submit-button">Найти</button>
-        </form>
-      </section>
+            <button type="submit" class="modal-submit-button">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
