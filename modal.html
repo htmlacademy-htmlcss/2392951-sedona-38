@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Седона</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+    <link
+      rel="advantages-item-wideize.css"
+      href="styles/advantages-item-wideize.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body>
+    ...
+    <footer data-test="footer">...</footer>
+    <div class="modal modal-reservation" data-test="modal">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form
+          class="form-reservation"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <div class="filed-group reservation-form-date">
+            <label class="modal-form-label" for="reservation-start"
+              >Дата заезда:</label
+            >
+
+            <input
+              class="modal-form-input modal-data-input"
+              type="text"
+              id="reservation-start"
+              name="name-start"
+              value="27 апреля 2020"
+              placeholder="Укажите дату"
+            />
+            <span class="modal-error modal-hint">
+              Мы не можем отправить вас в прошлое.
+            </span>
+          </div>
+          <div class="filed-group reservation-form-date">
+            <label class="modal-form-label" for="reservation-end"
+              >Дата выезда:</label
+            >
+
+            <input
+              class="modal-form-input modal-data-input"
+              type="text"
+              id="reservation-end"
+              name="data-end"
+              value="1 сентября 2023"
+              placeholder="Укажите дату"
+            />
+            <span class="modal-hint">
+              На эти даты есть свободные номера. Пока есть.
+            </span>
+          </div>
+
+          <div class="people-number-wrapper">
+            <div class="filed-group reservation-form-date people-number">
+              <span>Взрослые:</span>
+              <div class="modal-input-number-wrapper">
+                <button
+                  class="modal-form-number-button reduce-button"
+                  type="button"
+                >
+                  <svg
+                    class="people-svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="reduce"
+                  >
+                    <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
+                  </svg>
+                </button>
+                <label class="modal-form-label" for="adults">
+                  <input
+                    class="modal-form-input field-people"
+                    type="number"
+                    id="adults"
+                    value="2"
+                    min="1"
+                    max="99"
+                    name="adults-number"
+                /></label>
+                <button
+                  class="modal-form-number-button add-button"
+                  type="button"
+                >
+                  <svg
+                    class="people-svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="add"
+                  >
+                    <path
+                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                      fill="#7561573d"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="filed-group reservation-form-date people-number">
+              <div class="modal-child-wrapper">
+                <span>Дети:</span>
+                <span class="tooltip">
+                  <button
+                    class="tooltip-toggle"
+                    aria-labelledby="tooltip-label-date"
+                    type="button"
+                  >
+                    <svg
+                      class="tooltip-icon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <span
+                    class="tooltip-text"
+                    role="tooltip"
+                    id="tooltip-label-date"
+                  >
+                    Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются
+                    бесплатно.</span
+                  >
+                </span>
+              </div>
+              <div class="modal-input-number-wrapper">
+                <button
+                  class="modal-form-number-button reduce-button"
+                  type="button"
+                >
+                  <svg
+                    class="people-svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="reduce"
+                  >
+                    <path d="M3 9V11H17V9H3Z" fill="#7561573d" />
+                  </svg>
+                </button>
+                <label class="modal-form-label" for="child">
+                  <input
+                    class="modal-form-input field-people"
+                    type="number"
+                    id="child"
+                    name="child-number"
+                    value="2"
+                    max="99"
+                    min="0"
+                /></label>
+                <button
+                  class="modal-form-number-button add-button"
+                  type="button"
+                >
+                  <svg
+                    class="people-svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="add"
+                  >
+                    <path
+                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                      fill="#7561573d"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="modal-submit-button">Найти</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

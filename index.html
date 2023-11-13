@@ -65,7 +65,7 @@
       </div>
     </header>
     <main class="main-index main-container">
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <h1 class="visually visually-hidden">Сайт поиска отелей в Седоне</h1>
 
         <img
@@ -74,7 +74,7 @@
         />
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden advantages-title">Приемущества</h2>
         <div class="container">
           <div class="advantages-preview">
@@ -160,7 +160,7 @@
           </li>
         </ul>
       </section>
-      <section class="service">
+      <section class="service" data-test="service">
         <div class="service-wrapper">
           <h2 class="service-title">
             Приезжайте в Седону отдохнуть в комфорте и уюте!
@@ -199,7 +199,7 @@
           </li>
         </ul>
       </section>
-      <section class="search">
+      <section class="search" data-test="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-paragraph stiled-paragraph">
           Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
@@ -209,7 +209,7 @@
           >Поиск гостиницы в седоне</a
         >
       </section>
-      <section class="newsteller newsteller-main">
+      <section class="newsteller newsteller-main" data-test="subscribe">
         <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
         <p class="newsteller-paragraph stiled-paragraph">
           Только полезная информация и никакого спама,<br />
@@ -241,7 +241,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <div class="container">
         <div class="footer-wrapper">
           <section class="footer-social">
@@ -352,7 +352,7 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <p class="filed-group reservation-form-date">
+            <div class="filed-group reservation-form-date">
               <label class="modal-form-label" for="reservation-start"
                 >Дата заезда:</label
               >
@@ -368,7 +368,7 @@
               <span class="modal-error modal-hint">
                 Мы не можем отправить вас в прошлое.
               </span>
-            </p>
+            </div>
             <div class="filed-group reservation-form-date">
               <label class="modal-form-label" for="reservation-end"
                 >Дата выезда:</label

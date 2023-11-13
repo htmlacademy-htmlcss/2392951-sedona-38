@@ -62,7 +62,7 @@
     </header>
 
     <main class="main-inner main-container">
-      <section class="hotel-filter">
+      <section class="hotel-filter" data-test="filter">
         <div class="container">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs list-reset">
@@ -252,7 +252,7 @@
         </div>
       </section>
 
-      <section class="hotel-article">
+      <section class="hotel-article" data-test="catalog">
         <div class="container">
           <div class="view-list-block">
             <h2 class="founded-hotels">Найдено гостиниц: 38</h2>
@@ -475,7 +475,9 @@
       </section>
 
       <section class="newsteller">
-        <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
+        <h2 class="newsteller-title" data-test="subscribe">
+          Подпишитесь на рассылку
+        </h2>
         <p class="stiled-paragraph">
           Только полезная информация и никакого спама,<br />
           честное бойскаутское!
@@ -505,7 +507,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <div class="container">
         <div class="footer-wrapper">
           <section class="footer-social">

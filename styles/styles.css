@@ -341,19 +341,6 @@ body {
   left: 85px;
 }
 
-/* .advantages-description-column::before {
-  position: absolute;
-  width: 60px;
-  height: 2px;
-  color: #0000004d;
-  content: "";
-  background: #000000;
-  opacity: 0.3;
-
-  top: 86px;
-  left: 85px;
-} */
-
 .advantages-item-title-wide::before {
   color: #ffffff4d;
   background: #ffffff;
@@ -366,12 +353,6 @@ body {
   bottom: -33px;
   left: 85px;
 }
-
-/* .advantages-wide-column::before {
-  color: #ffffff4d;
-  background: #ffffff;
-  left: 170px;
-} */
 
 .search {
   margin: 0;
