@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Гостиницы Седона</title>
-    <link rel="normalize.css" href="styles/normalize.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
@@ -16,7 +17,7 @@
               src="images/header/logo.svg"
               width="140"
               height="70"
-              alt="Логотоп Седоны"
+              alt="Логотоп Седоны."
             />
           </a>
           <nav class="navigation">
@@ -50,10 +51,7 @@
               </li>
 
               <li class="navigation-user-item navigation-link-button-block">
-                <a
-                  class="navigation-link-button button primary-button"
-                  href="#"
-                  type="button"
+                <a class="navigation-link-button button primary-button" href="#"
                   >Хочу сюда!
                 </a>
               </li>
@@ -93,20 +91,7 @@
                 />
               </svg>
             </li>
-            <li class="breadcrumbs-item">
-              <svg
-                width="8"
-                height="11"
-                viewBox="0 0 8 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4688 1.66526 10.4688C1.79026 10.4688 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z"
-                  fill="white"
-                />
-              </svg>
-            </li>
+
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
@@ -116,14 +101,14 @@
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
-            <div class="left-hotel-filter-group">
+            <div class="left-hotel-filter-group" data-test="filter">
               <fieldset class="hotel-filter-group hotel-filter-checkbox">
                 <legend class="hotel-filter-title">Инфраструктура:</legend>
                 <ul class="hotel-filter-list list-reset">
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="checkbox"
                         name="pool"
                         checked
@@ -135,7 +120,7 @@
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="checkbox"
                         name="parking"
                         checked
@@ -147,7 +132,7 @@
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="checkbox"
                         name="internet"
                       />
@@ -164,7 +149,7 @@
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="radio"
                         name="housing-type"
                         value="hotel"
@@ -177,7 +162,7 @@
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="radio"
                         name="housing-type"
                         value="motel"
@@ -189,7 +174,7 @@
                   <li class="hotel-filter-item">
                     <label class="conveniences">
                       <input
-                        class="conveniences-input"
+                        class="conveniences-input visually-hidden"
                         type="radio"
                         name="housing-type"
                         value="apartments"
@@ -230,7 +215,7 @@
 
                   <div class="range-scale-wrap">
                     <div class="range-scale"></div>
-                    <div class="range-bar" style="width: 226px">
+                    <div class="range-bar">
                       <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden"
                           >Изменить минимальную цену</span
@@ -267,14 +252,14 @@
         </div>
       </section>
 
-      <section class="hotel-article">
+      <section class="hotel-article" data-test="catalog">
         <div class="container">
           <div class="view-list-block">
             <h2 class="founded-hotels">Найдено гостиниц: 38</h2>
 
             <select
               class="select-control stiled-paragraph"
-              aria-label="Сортировка"
+              aria-label="Сортировка."
             >
               <option value="cheap" class="select-control-option">
                 Сначала дешевые
@@ -314,13 +299,17 @@
                 <img
                   class="hotel-list-item-image"
                   src="images/catalog-page/hotel-galery/hotel-1.jpg"
-                  alt=" Гостиница Amara Resort & Spa"
+                  alt=" Гостиница Amara Resort & Spa."
+                  width="300"
+                  height="212"
               /></a>
               <a class="hotel-image-link" href="#" tabindex="-1">
                 <h3 class="hotel-list-item-title">Amara Resort & Spa</h3>
               </a>
               <div class="primary-description">
-                <p class="stiled-paragraph">Гостиница</p>
+                <p class="stiled-paragraph primary-description-left-column">
+                  Гостиница
+                </p>
                 <p class="hotel-lowest-price stiled-paragraph">От 4000 ₽</p>
               </div>
               <div class="hotel-buttons-block">
@@ -350,7 +339,9 @@
                 <img
                   class="hotel-list-item-image"
                   src="images/catalog-page/hotel-galery/hotel-2.jpg"
-                  alt=" Гостиница Villas at Poco Diablo"
+                  alt=" Гостиница Villas at Poco Diablo."
+                  width="300"
+                  height="212"
                 />
               </a>
               <a class="hotel-image-link" href="#" tabindex="-1">
@@ -388,7 +379,9 @@
                 <img
                   class="hotel-list-item-image"
                   src="images/catalog-page/hotel-galery/hotel-3.jpg"
-                  alt=" Гостиница Desert Quail Inn"
+                  alt=" Гостиница Desert Quail Inn."
+                  width="300"
+                  height="212"
                 />
               </a>
               <a class="hotel-image-link" href="#" tabindex="-1">
@@ -424,7 +417,9 @@
                 <img
                   class="hotel-list-item-image"
                   src="images/catalog-page/hotel-galery/hotel-4.jpg"
-                  alt=" Гостиница GreenTree Inn"
+                  alt=" Гостиница GreenTree Inn."
+                  width="300"
+                  height="212"
                 />
               </a>
               <a class="hotel-image-link" href="#" tabindex="-1">
@@ -490,7 +485,9 @@
       </section>
 
       <section class="newsteller">
-        <h2 class="newsteller-title">Подпишитесь на рассылку</h2>
+        <h2 class="newsteller-title" data-test="subscribe">
+          Подпишитесь на рассылку
+        </h2>
         <p class="stiled-paragraph">
           Только полезная информация и никакого спама,<br />
           честное бойскаутское!
@@ -520,7 +517,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <div class="container">
         <div class="footer-wrapper">
           <section class="footer-social">
@@ -537,6 +534,7 @@
                     width="25"
                     height="15"
                     fill="none"
+                    role="img"
                   >
                     <path
                       class="social-icon"
@@ -556,6 +554,7 @@
                     width="18"
                     height="16"
                     fill="none"
+                    role="img"
                   >
                     <path
                       class="social-icon"
@@ -576,6 +575,7 @@
                     width="23"
                     height="18"
                     fill="none"
+                    role="img"
                   >
                     <path
                       class="social-icon"
@@ -595,13 +595,15 @@
           </section>
           <section>
             <div class="footer-html-logo">
-              <h2 class="visually-hidden">Логотип подвала Сайта</h2>
+              <h2 class="visually-hidden">Логотип HTML Academy</h2>
               <a href="https://htmlacademy.ru/" class="html-logo">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="115"
                   height="34"
                   fill="none"
+                  role="img"
+                  aria-label="логотип HTML Academy."
                 >
                   <path
                     fill="#000"
