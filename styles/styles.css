@@ -127,7 +127,7 @@ body {
 
 .navigation-list {
   display: flex;
-  width: 420px;
+  flex-wrap: wrap;
   margin-left: 170px;
   margin-top: 0;
   padding: 0;
@@ -135,15 +135,24 @@ body {
   margin-bottom: 0;
 }
 
-/* добавить нишний бордер */
-.border-bottom {
-  border-bottom: #756257;
-  border-width: 100%;
+.navigation-list-item:hover .navigation-link {
+  background-color: #f2f2f2;
+}
+
+.navigation-list-item:focus .navigation-link {
+  background-color: #f2f2f2;
+  border: 3px solid rgb(130, 179, 211);
+}
+
+.navigation-list-item:active .navigation-link {
+  background-color: #e6e6e6;
+  color: rgba(117, 97, 87, 0.302);
 }
 
 .navigation-user {
   display: flex;
-  max-width: 288px;
+  flex-wrap: wrap;
+  max-width: 135px;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
@@ -172,13 +181,43 @@ body {
   box-sizing: content-box;
 }
 
-.search-icon {
-  background-image: url("../images/header/icons/search.svg");
+.likes-icon {
+  position: relative;
 }
 
-.likes-icon {
-  background-image: url("../images/header/icons/likes.svg");
-  position: relative;
+.navigation-link:hover {
+  background-color: #f2f2f2;
+}
+
+.navigation-link:focus {
+  background-color: #f2f2f2;
+  outline: 3px solid rgb(130, 179, 211);
+}
+
+.navigation-link:active {
+  background-color: #e6e6e6;
+  color: rgba(117, 97, 87, 0.302);
+}
+
+.navigation-user-link:hover {
+  background-color: #f2f2f2;
+}
+
+.navigation-user-link:focus {
+  background-color: #f2f2f2;
+  outline: 3px solid rgb(130, 179, 211);
+}
+
+.navigation-user-link:active {
+  background-color: #e6e6e6;
+}
+
+.likes-icon:active path {
+  fill: rgba(117, 97, 87, 0.302);
+}
+
+.search-icon:active path {
+  fill: rgba(117, 97, 87, 0.302);
 }
 
 .number-of-likes {
@@ -783,12 +822,12 @@ body {
 }
 
 .range-toggle:focus {
-  border: 4px rgb(130, 179, 211);
+  border: 4px solid rgb(130, 179, 211);
 }
 
 .range-toggle:active {
   background-color: #fff;
-  border: 2px rgb(130, 179, 211);
+  border: 2px solid rgb(130, 179, 211);
 }
 
 .toggle-min {
@@ -1037,6 +1076,7 @@ body {
   width: 160px;
   justify-content: center;
   margin-left: 20px;
+  margin-top: 14px;
 }
 
 .secondary-button {
@@ -1157,6 +1197,8 @@ body {
   min-width: 60px;
   min-height: 60px;
   line-height: 36px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .pagination-item-link:hover:not(
@@ -1190,6 +1232,8 @@ body {
   color: #000000;
   background-color: #ffffff;
   font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .footer-wrapper {
@@ -1486,7 +1530,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   text-transform: none;
-  padding: 23px 22px 23px 18px;
+  padding: 23px 22px 23px;
   border-radius: 8px;
   width: 256px;
   position: absolute;
@@ -1502,8 +1546,9 @@ body {
 .tooltip-text:after {
   content: "";
   background-image: url("../images/modal/tooltip-arrow.svg");
-  width: 16px;
-  height: 6px;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 8px;
   position: absolute;
   bottom: 100%;
   left: 0;
