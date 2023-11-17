@@ -101,11 +101,11 @@ body {
 /* header */
 .header-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .navigation {
   display: flex;
+  align-items: center;
   margin: 0 auto;
   padding: 0;
   background-color: #ffffff;
@@ -113,10 +113,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-}
-
-.current-page {
-  border-bottom: 2px solid #756257;
 }
 
 .logo {
@@ -127,7 +123,7 @@ body {
 
 .navigation-list {
   display: flex;
-  width: 420px;
+  flex-wrap: wrap;
   margin-left: 170px;
   margin-top: 0;
   padding: 0;
@@ -135,15 +131,22 @@ body {
   margin-bottom: 0;
 }
 
-/* добавить нишний бордер */
-.border-bottom {
-  border-bottom: #756257;
-  border-width: 100%;
+.navigation-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-link:focus {
+  outline: 3px solid rgb(130, 179, 211);
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.302);
 }
 
 .navigation-user {
   display: flex;
-  max-width: 288px;
+  flex-wrap: wrap;
+  max-width: 135px;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
@@ -154,11 +157,23 @@ body {
   display: block;
   text-decoration: none;
   font-size: 20px;
-  padding: 20px 0;
-  margin: 0 16px;
+  padding: 20px 16px;
+  margin: 0;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
+  position: relative;
+}
+
+.current-page:before {
+  content: "";
+  width: calc(100% - 32px);
+  height: 2px;
+  display: block;
+  background-color: #756257;
+  position: absolute;
+  bottom: 0;
+  left: 16px;
 }
 
 .navigation-user-link {
@@ -172,13 +187,28 @@ body {
   box-sizing: content-box;
 }
 
-.search-icon {
-  background-image: url("../images/header/icons/search.svg");
+.likes-icon {
+  position: relative;
 }
 
-.likes-icon {
-  background-image: url("../images/header/icons/likes.svg");
-  position: relative;
+.navigation-user-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-user-link:focus {
+  outline: 3px solid rgb(130, 179, 211);
+}
+
+.navigation-user-link:active {
+  background-color: #ffffff;
+}
+
+.likes-icon:active path {
+  fill: rgba(117, 97, 87, 0.302);
+}
+
+.search-icon:active path {
+  fill: rgba(117, 97, 87, 0.302);
 }
 
 .number-of-likes {
@@ -779,16 +809,17 @@ body {
 }
 
 .range-toggle:hover {
-  background-color: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus {
-  border: 4px rgb(130, 179, 211);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 4px solid rgb(130, 179, 211);
 }
 
 .range-toggle:active {
-  background-color: #fff;
-  border: 2px rgb(130, 179, 211);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 2px solid rgb(130, 179, 211);
 }
 
 .toggle-min {
@@ -1034,6 +1065,7 @@ body {
 
 .navigation-link-button {
   display: flex;
+  flex-shrink: 0;
   width: 160px;
   justify-content: center;
   margin-left: 20px;
@@ -1157,6 +1189,8 @@ body {
   min-width: 60px;
   min-height: 60px;
   line-height: 36px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .pagination-item-link:hover:not(
@@ -1190,6 +1224,8 @@ body {
   color: #000000;
   background-color: #ffffff;
   font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .footer-wrapper {
@@ -1486,7 +1522,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   text-transform: none;
-  padding: 23px 22px 23px 18px;
+  padding: 23px 22px 23px;
   border-radius: 8px;
   width: 256px;
   position: absolute;
@@ -1502,8 +1538,9 @@ body {
 .tooltip-text:after {
   content: "";
   background-image: url("../images/modal/tooltip-arrow.svg");
-  width: 16px;
-  height: 6px;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 8px;
   position: absolute;
   bottom: 100%;
   left: 0;
